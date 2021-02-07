@@ -3,6 +3,7 @@ const itemSearch = document.getElementById("item-search");
 const searchBtn = document.getElementById("search-btn");
 
 
+// calling api here
 const itemCallByName = () => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${itemSearch.value}`;
     fetch(url)
@@ -14,12 +15,12 @@ const itemCallByName = () => {
 };
 
 
-
+// food show function here
 const foodShow = (foods) => {
     if (itemSearch.value.length <= 0 || foods.meals == null) {
         foodCardArea.innerHTML = `
        <div class="alert alert-danger" role="alert">
-         <h3> Sorry we can't get any item "${itemSearch.value}"</h3>
+         <h3> Sorry we can't get any matching item "${itemSearch.value}"</h3>
         </div>`;
         foodCardArea.classList.remove("food-card-area");
         foodCardArea.classList.add("food-card-area-warning");
@@ -28,8 +29,6 @@ const foodShow = (foods) => {
         allItemShow(foods)
     }
 };
-
-
 
 const allItemShow = (data) => {
     const allFood = data.meals;
@@ -55,7 +54,7 @@ const allItemShow = (data) => {
 
 
 
-
+// calling items by id
 const callItemById = (id) => {
     const idUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     fetch(idUrl)
@@ -68,8 +67,7 @@ const callItemById = (id) => {
 }
 
 
-
-
+// food details function here
 const foodDetailShower = document.getElementById("food-datails-shower")
 const closeWindow = () => {
     foodDetailShower.classList.remove("food-datails-move");
@@ -81,8 +79,6 @@ const getSelectCard = (id) => {
     foodDetailShower.classList.add("food-datails-move");
     callItemById(id)
 }
-
-
 
 const itemDetailWindow = (item) => {
     const meal = item.meals[0]
@@ -106,7 +102,7 @@ const itemDetailWindow = (item) => {
    `;
 }
 
-
+// default Item show function
 const defaultItemshow = () => {
     for (let i = 0; i <= 8; i++) {
         fetch("https://www.themealdb.com/api/json/v1/1/random.php")
