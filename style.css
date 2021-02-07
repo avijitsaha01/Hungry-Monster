@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .nav-item .nav-link {
+    color: black;
+    font-weight: 500;
+    padding: 10px 20px !important;
+    margin-right: 5px;
+}
+
+.food-card-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    width: 1000px;
+    margin: auto;
+}
+
+.food-card-area-warning {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.item-thum {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+    background: transparent !important;
+}
+
+.card-body {
+    padding: 3rem;
+}
+
+.ingredient li {
+    list-style: none;
+}
+
+.ingredient li::before {
+    content: '';
+}
+
+.item-details-card .card {
+    margin: auto;
+}
+
+.item.card {
+    widtH: 80%;
+    margin: auto;
+    height: 120%;
+    background: white !important;
+}
+
+.card-img-top.item {
+    width: 80%;
+    height: 350px;
+    display: inherit;
+    margin: auto;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.food-card {
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014), 0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025), 0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036), 0 100px 80px rgba(0, 0, 0, 0.05);
+}
+
+.food-card:hover {
+    transform: translateY(-20px);
+    background: lightblue;
+}
+
+#food-datails-shower {
+    background: #ffffff;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    padding: 10px;
+    top: 0px;
+    right: -100%;
+    overflow-y: auto;
+}
+
+#food-datails-shower::-webkit-scrollbar {
+    display: none;
+}
+
+.food-datails-move {
+    left: 0%;
+}
+
+.close-icon {
+    background-color: #ffffff;
+    color: rgb(250, 29, 0);
+    position: absolute;
+    top: 7px;
+    left: -69px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    border-radius: 10%;
+    border: 1px solid red;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.close-icon:hover {
+    background: red;
+    color: white;
+}
+.close-icon:focus {
+    outline: none;
+}
