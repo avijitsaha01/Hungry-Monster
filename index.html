@@ -16,16 +16,16 @@
     <!-- navbar start here -->
     <nav class="navbar navbar-expand-lg p-0">
         <div class="container">
-            <a class="navbar-brand p-0" href="#">
-                <img src="images/logo.svg" alt="">
+            <a onClick="window.location.reload();" class="w-25 navbar-brand p-0 ms-50px" href="#">
+                <img class="brand-logo" width="100"  src="images/logo.jpg" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               Menu
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Home</a>
+                        <a class="nav-link " onClick="window.location.reload();" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -45,20 +45,21 @@
     </nav>
     <!-- navbar end here -->
 
-    <!-- search start here -->
-    <section class="serch-input container ">
-        <div class="input-group p-5 w-75 m-auto ">
-            <span class="input-group-text btn border ">
-                <img src="images/search.svg" class="search-icon " alt="">
+    <!-- search section start here -->
+    <section class="serch-input container">
+        <div class="input-group p-5 w-75 m-auto">
+            <span class="input-group-text btn border bg-info">
+                <img src="images/search.svg" class="search-icon" alt="">
             </span>
-            <input id="item-search" type="text" class="form-control " placeholder="">
-            <button id="search-btn" onclick="itemCallByName()" class="input-group-text btn-secondary">Search</button>
+            <input id="item-search" type="text" class="form-control" placeholder="">
+            <button id="search-btn" onclick="itemCallByName()"
+                class="input-group-text btn-info text-white">Search</button>
         </div>
     </section>
     <!-- search end here -->
 
     <!-- all food show here -->
-    <section class="food-card-area ">
+    <section class="food-card-area">
 
     </section>
 
@@ -66,7 +67,9 @@
     <section id="food-datails-shower">
 
     </section>
-
+    <section class="copyright bg-info text-white">
+        <p>&copy; copyrights belongs to Programming hero 5th Assignment</p>
+    </section>
     <!-- all script added here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

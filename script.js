@@ -19,11 +19,11 @@ const itemCallByName = () => {
 const foodShow = (foods) => {
     if (itemSearch.value.length <= 0 || foods.meals == null) {
         foodCardArea.innerHTML = `
-       <div class="alert alert-danger" role="alert">
-         <h3> Sorry we can't get any matching item "${itemSearch.value}"</h3>
+       <div class="alert bg-info text-white">
+         <h4> Not Found item <span class="text-danger"> ${itemSearch.value}</span></h4>
         </div>`;
         foodCardArea.classList.remove("food-card-area");
-        foodCardArea.classList.add("food-card-area-warning");
+        foodCardArea.classList.add("food-card-error");
     }
     else {
         allItemShow(foods)
