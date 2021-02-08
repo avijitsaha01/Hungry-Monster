@@ -88,12 +88,12 @@ const itemDetailWindow = (item) => {
         <h3 class="card-title text-center">${meal.strMeal}</h3>
         <h5>Ingredient</h5>
         <ul class="ingredient">
-        <li class="">${meal.strIngredient1}</li>
-        <li class="">${meal.strIngredient2}</li>
-        <li class="">${meal.strIngredient3}</li>
-        <li class="">${meal.strIngredient4}</li>
-        <li class="">${meal.strIngredient5}</li>
-        <li class="">${meal.strIngredient6}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient1}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient2}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient3}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient4}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient5}</li>
+            <li><i class="fa fa-check-square" aria-hidden="true"></i>${meal.strIngredient6}</li>
          </ul>  
       </div>
         <button onclick="closeWindow()" class="close-icon "> &times; </button>
