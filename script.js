@@ -1,12 +1,11 @@
-const foodCardArea = document.querySelector(".food-card-area");
 const itemSearch = document.getElementById("item-search");
 const searchBtn = document.getElementById("search-btn");
-
+const foodCardArea = document.querySelector(".food-card-area");
 
 // calling api here
 const itemCallByName = () => {
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${itemSearch.value}`;
-    fetch(url)
+    const link = `https://www.themealdb.com/api/json/v1/1/search.php?s=${itemSearch.value}`;
+    fetch(link)
         .then((res) => res.json())
         .then((food) => {
             console.log(food);
@@ -56,8 +55,8 @@ const allItemShow = (data) => {
 
 // calling items by id
 const callItemById = (id) => {
-    const idUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
-    fetch(idUrl)
+    const linkId = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    fetch(linkId)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -68,21 +67,21 @@ const callItemById = (id) => {
 
 
 // food details function here
-const foodDetailShower = document.getElementById("food-datails-shower")
+const foodDetailShow = document.getElementById("food-datails-show")
 const closeWindow = () => {
-    foodDetailShower.classList.remove("food-datails-move");
+    foodDetailShow.classList.remove("food-datails-move");
     document.querySelector('.card.item').innerHTML = ""
 };
 
 const getSelectCard = (id) => {
     console.log(id);
-    foodDetailShower.classList.add("food-datails-move");
+    foodDetailShow.classList.add("food-datails-move");
     callItemById(id)
 }
 
 const itemDetailWindow = (item) => {
     const meal = item.meals[0]
-    foodDetailShower.innerHTML = `
+    foodDetailShow.innerHTML = `
     <div class="card item" >
       <img src="${meal.strMealThumb}" class="card-img-top item" alt="...">
       <div class="card-body">
